@@ -2,10 +2,20 @@
 
 @section('content')
 
+
 <h1 class="mt-4 text-center">
 Kota Banjar
 </h1>
 <div style="width:100%;height:400px" id="map"></div>
+
+
+<br>
+<h2 class="mt-1 text-center">Tempat Paling Potensial</h2>
+<br>
+@include('admin.dataSampleSekolah')
+@include('admin.dataSampleKantor')
+@include('admin.dataSampleLainnya')
+
 
 @endsection
 

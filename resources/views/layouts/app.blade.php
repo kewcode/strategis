@@ -25,19 +25,28 @@
 <body>
 
 
-    <nav class="d-block d-lg-none bg-white py-3 text-center" style="position:fixed;bottom:0;width:100%;z-index:1002">
+    <nav class="d-block d-lg-none bg-white py-3 text-center" style="position:fixed;bottom:0;width:100%;z-index:1002;font-size:12px">
         <div class="row">
-        <a class="col-4" href="/home">
-            <i class="ni ni-map-big"></i>
-            Dash
-        </a>
-        <a href="/variable" class="col-4">
-            <i class="ni ni-building"></i>
-            Var</a>
-        <a href="/users" class="col-4">
+            <a class="col-3" href="/home">
+                <i class="ni ni-map-big"></i>
+                <br>
+                Dashboard
+            </a>
+            <a href="/topsis" class="col-3">
+                <i class="ni ni-air-baloon"></i>
+
+                <br>
+                Topsis</a>
+            
+            <a href="/variable" class="col-3">
+                <i class="ni ni-building"></i>
+                <br>
+                Variable</a>
+            <a href="/users" class="col-3">
                 <i class="ni ni-badge"></i>
+                <br>
                 Users</a>
-            </div>
+        </div>
     </nav>
         <nav class="navbar navbar-expand-md navbar-dark bg-default shadow-sm">
             <div class="container">
@@ -75,14 +84,19 @@
                                 Dashboard</a>
                         </li>
                         <li>
+                            <a href="/topsis" class="nav-link">
+                                <i class="ni ni-air-baloon"></i>
+                                Topsis</a>
+                        </li>
+                        <li>
                             <a href="/variable" class="nav-link">
                                 <i class="ni ni-building"></i>
-                                Manage Variable</a>
+                                Variable</a>
                         </li>
                         <li>
                             <a href="/users" class="nav-link">
                                 <i class="ni ni-badge"></i>
-                                Manage Users</a>
+                                Users</a>
                         </li>
                         @endif
                     </ul>
@@ -103,7 +117,7 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="nav-link" class="nav-link" href="/users" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    <i class="ni ni-circle-08"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                             </li>

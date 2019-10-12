@@ -19,6 +19,11 @@ Route::middleware("auth")->group(function(){
     Route::post('/users/{id}/edit', 'HomeController@users_edit')->name('users_edit');
     Route::get('/variable', 'HomeController@variable')->name('variable');
 
+    // Topsis
+    Route::get('/topsis', 'HomeController@topsis')->name('topsis');
+    Route::post('/tambah-topsis', 'HomeController@tambahTopsis')->name('t-topsis');
+    Route::post('/hapus-topsis/{id}', 'HomeController@hapusTopsis')->name('h-topsis');
+
     // Variable
     Route::get('/variable/v', 'VariableController@v')->name('v');
     Route::get('/variable/v/data', 'VariableController@data_v')->name('data_v');

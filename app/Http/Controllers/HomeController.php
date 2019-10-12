@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Variable;
+use App\Topsis;
 use Hash;
 use Auth;
 
@@ -84,8 +85,40 @@ class HomeController extends Controller
         return view('admin.variable', compact('users'));
     }
 
+    public function topsis(Request $request)
+    {
+        $users = User::orderBy("id","DESC")->paginate(8);
+
+        if ($request->ajax()) {
+          $view = view('admin.userData',compact('users'))->render();
+              return response()->json(['html'=>$view]);
+          }
+          
+        return view('admin.topsis', compact('users'));
+    }
+
     public function maps(){
       return Variable::where("active",1)->select("bujur","lintang","nama","kecamatan")->get();
+    }
+
+
+    public function tambahTopsis(Request $req){
+      // dd($req);
+
+      // 'nama','kepadatan_penduduk','lokasi','jenis_usaha_sama'
+      $data = new Topsis;
+      $data->nama = $req->nama;
+      $data->kepadatan_penduduk = $req->kepadatan_penduduk;
+      $data->aksebilitas = $req->aksebilitas;
+      $data->lokasi = $req->lokasi;
+      $data->jenis_usaha_sama = $req->jenis_usaha_sama;
+      $data->save();
+
+      return back()->with("success","berhasil ditambahkan");
+    }
+    public function hapusTopsis($id){
+      Topsis::find($id)->delete();
+      return "success";
     }
 
 }
