@@ -51,8 +51,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-default shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/ajk.png" width="30px">
-                    AGK
+                   Strategis
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -62,8 +61,7 @@
                         <div class="row">
                             <div class="col-6 collapse-brand">
                                     <a class="navbar-brand text-dark" href="{{ url('/') }}">
-                                        <img src="/ajk.png" width="30px">
-                                        AGK
+                                        Strategis
                                     </a>
                             </div>
                             <div class="col-6 collapse-close">

@@ -10,7 +10,9 @@ Route::get('/gmaps', function () {
 
 // Auth::routes();
 
-Auth::routes(['register' => false]);
+Auth::routes(
+    // ['register' => false]
+);
 
 Route::middleware("auth")->group(function(){
         

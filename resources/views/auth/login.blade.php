@@ -10,8 +10,7 @@
       <div class="col-lg-5">
         <div class="card shadow border-0">
           <div class="text-center mt-5">
-              <img src="/ajk.png" width="70px">
-              <div class="text-center mt-3">Ayam Geprek Juara</div>
+              <div class="text-center mt-3">Strategis</div>
            
           </div>
           <div class="card-body px-lg-5 pb-lg-5 ">

@@ -75,8 +75,6 @@
             <div class="content">
                     <a href="/login">
                         <div class="title m-b-md">
-                            <img src="/ajk-text.jpeg" width="250px">
-                            <br>
                             <small> STRATEGIS </small>
                         </div>
                     </a>

@@ -6,7 +6,7 @@
               <div class="row align-items-center">
                   <div class="col-auto">
                       <a href="#" class="avatar avatar-xl rounded-circle">
-                      <img alt="Image placeholder" src="/ajk.png">
+                      {{-- <img alt="Image placeholder" src="/ajk.png"> --}}
                       </a>
                   </div>
                   <div class="col ml--2">
